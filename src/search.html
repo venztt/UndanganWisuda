@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/styles/output.css" rel="stylesheet" />
+    <title>Cari Undangan Wisuda</title>
+    <link rel="icon" href="./images/logo.png" />
+  </head>
+  <body>
+    <nav
+      class="relative flex w-full flex-wrap items-center justify-between bg-[#284C67] py-2"
+    >
+      <div
+        class="flex w-full flex-wrap items-center justify-between px-3 mx-auto max-w-7xl sm:px-6 lg:px-8 py-5"
+      >
+        <div>
+          <a
+            class="mx-2 my- flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
+            href="./index.html"
+          >
+            <img
+              class="mr-2"
+              src="./images/logo.png"
+              style="height: 50px"
+              alt="Polinema Logo"
+              loading="lazy"
+            />
+            <span class="font-medium dark:text-neutral-200"
+              >Politeknik <br />Negeri Malang</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="px-5 mx-auto max-w-7xl sm:px-6 lg:px-24 py-8 image bg-div_background bg-no-repeat bg-center"
+    >
+      <div class="bg-[#EB5757] rounded-2xl">
+        <p class="text-white md:text-2xl font-bold text-center p-3">
+          SETTING KECERAHAN LAYAR HP HARUS MAKSIMAL JARAK SCAN 20-30 CM DARI
+          ALAT PEMBACA!
+        </p>
+      </div>
+      <form action="" class="py-8">
+        <div>
+          <input
+            type="text"
+            id="first_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="SCAN QR-CODE PADA ALAT SCANNER"
+            required
+          />
+        </div>
+      </form>
+      <div class="flex flex-col items-center gap-8">
+        <img src="./images/scan_qr_code.png" alt="scan_qr_code" id="open" />
+        <div class="bg-[#828282] rounded-2xl p-3">
+          <p
+            class="text-white text-xl font-bold text-center line-clamp-2"
+            id="open2"
+          >
+            SCAN QR CODE <br />
+            UNDANGAN WISUDA
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="overlay"
+      class="fixed top-0 left-0 w-screen h-screen bg-gray-900 opacity-50 hidden"
+    ></div>
+
+    <!-- The first dialog -->
+    <div
+      id="dialog"
+      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-lg p-8 md:w-1/2 flex flex-col hidden gap-5"
+    >
+      <div class="flex flex-wrap justify-evenly">
+        <div class="flex flex-col items-center gap-5">
+          <img
+            class="w-[148px] h-[148px] object-cover rounded-full my-2"
+            src="./images/mahasiswa.png"
+            alt="mahasiswa"
+          />
+          <p class="font-bold text-center">Nabilah Argyanti S. Tr. Kom.</p>
+          <p
+            class="text-white bg-[#EB5757] p-2 rounded-xl font-semibold text-sm"
+          >
+            WISUDAWAN BELUM <br />
+            MEMASUKI RUANGAN
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 mt-5 md:mt-0 justify-between">
+          <p class="font-bold text-center">Bapak Muhammad Nargyanto</p>
+          <div class="space-y-2">
+            <div
+              class="text-white bg-[#F2994A] p-2 rounded-xl flex font-semibold items-center gap-2"
+            >
+              <img src="./images/vip.png" alt="vip" />
+              <p>D-IV Teknik Informatika</p>
+            </div>
+            <div
+              class="text-white bg-[#2D9CDB] p-2 rounded-xl flex font-semibold items-center gap-2"
+            >
+              <img src="./images/chair.png" alt="vip" />
+              <p>D4-TI-01</p>
+            </div>
+            <div
+              class="text-white bg-[#27AE60] p-2 rounded-xl flex font-semibold items-center gap-2"
+            >
+              <img src="./images/check-box.png" alt="vip" />
+              <p>Pendamping Hadir</p>
+              <p class="">2/2</p>
+            </div>
+          </div>
+          <small class="text-[#828282] text-center"
+            >Tercatat pada 23-09-2023, 13:23:52</small
+          >
+        </div>
+      </div>
+      <button
+        id="close"
+        class="bg-[#00AEFF] hover:bg-blue-700 text-white font-bold py-2 px-4 mt-8 text-center w-9/12 rounded-xl mx-auto"
+      >
+        Konfirmasi
+      </button>
+    </div>
+
+    <!-- The second dialog -->
+    <div
+      id="dialog2"
+      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl shadow-lg p-10 hidden"
+    >
+      <div class="flex flex-col items-center gap-5">
+        <img class="my-2" src="./images/sorry.png" alt="sorry" />
+        <p class="font-bold text-lg text-center">Gagal Menyimpan Data</p>
+        <p class="text-[#828282] text-center">
+          QR code <strong>tidak valid</strong> <br />atau
+          <strong>sudah digunakan</strong>
+        </p>
+      </div>
+      <button
+        id="close2"
+        class="bg-[#00AEFF] hover:bg-blue-700 text-white font-bold py-2 px-4 mt-8 text-center rounded-xl w-full"
+      >
+        Konfirmasi
+      </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      openButton = $("#open");
+      dialog = $("#dialog");
+      closeButton = $("#close");
+      overlay = $("#overlay");
+
+      openButton.click(function () {
+        overlay.removeClass("hidden");
+        dialog.removeClass("hidden");
+      });
+
+      closeButton.click(function () {
+        overlay.addClass("hidden");
+        dialog.addClass("hidden");
+      });
+
+      openButton2 = $("#open2");
+      dialog2 = $("#dialog2");
+      closeButton2 = $("#close2");
+
+      openButton2.click(function () {
+        overlay.removeClass("hidden");
+        dialog2.removeClass("hidden");
+      });
+
+      closeButton2.click(function () {
+        overlay.addClass("hidden");
+        dialog2.addClass("hidden");
+      });
+    </script>
+  </body>
+</html>

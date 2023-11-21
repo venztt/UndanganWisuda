@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/styles/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              '31': '120px',
+            },
+            fontFamily: {
+              inter: ['Inter'],
+              cinzel: ['Cinzel'],
+              gabriela: ['Gabriela'],
+            },
+            colors: {
+              poltek: '#284C67',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Undangan Wisuda</title>
+    <link rel="icon" href="./images/logo.png" />
+  </head>
+  <body>
+    <nav
+      class="relative flex w-full flex-wrap items-center justify-between bg-[#284C67] py-2"
+    >
+      <div
+        class="flex w-full flex-wrap items-center justify-between px-3 mx-auto max-w-7xl sm:px-6 lg:px-8 py-5"
+      >
+        <div>
+          <a
+            class="mx-2 my- flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
+            href="./search.html"
+          >
+            <img
+              class="mr-2"
+              src="./images/logopoltek.png"
+              style="height: 50px"
+              alt="Polinema Logo"
+            />
+            <span class="font-normal font-cinzel dark:text-neutral-200"
+              >Politeknik <br />Negeri Malang</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="px-5 mx-auto max-w-7xl sm:px-6 lg:px-8 py-8">
+      <div class="flex justify-center gap-3">
+        <button
+          class="rounded-2xl w-1/4 px-4 py-4 bg-[#284C67] text-white font-medium text-xs md:text-base border-2 border-[#284C67]"
+          id="undangan_btn"
+        >
+          Undangan
+        </button>
+        <button
+          class="rounded-2xl w-1/4 px-4 py-4 bg-withe text-[#284C67] font-medium text-xs md:text-base border-2 border-[#284C67]"
+          id="qr_code_btn"
+        >
+          QR Code
+        </button>
+        <!-- if the mobile is on then the text is a bit smaller -->
+        <button
+          class="rounded-2xl w-1/4 px-4 py-4 bg-withe text-[#284C67] font-medium text-xs md:text-base border-2 border-[#284C67]"
+          id="peta_wisuda_btn"
+        >
+          Peta Wisuda
+        </button>
+      </div>
+    </div>
+    <div
+      class="px-5 mx-auto max-w-7xl sm:px-6 lg:px-8 py-8 image bg-div_background bg-no-repeat bg-center"
+      id="undangan"
+    >
+      <div class="flex gap-3 flex-col items-center">
+        <h1 class="text-[32px] font-gabriela font-bold">Undangan Wisuda</h1>
+        <div>
+          <img
+            class="w-[148px] h-[148px] object-cover rounded-full my-8"
+            src="./images/mahasiswa.png"
+            alt="mahasiswa"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-3">
+        <strong>Kepada</strong>
+        <p class="text-center text-sm md:text-base px-5">
+          Bapak Muhammad Nargyanti / Ibu Siti Nargyanti/
+          <br />Saudara/i Nailah Argyanti
+        </p>
+        <div class="bg-[#FFBF43] w-fit p-1 rounded-md">
+          <strong class="text-white">VIP</strong>
+        </div>
+        <strong> Untuk menghadiri wisuda</strong>
+        <table>
+          <tbody class="text-sm md:text-base">
+            <tr>
+              <td class="w-[100px] text-right">Nama</td>
+              <td class="w-[50px] text-center">:</td>
+              <td class="w-[200px]">Nabilah Argyanti S. Tr. Kom.</td>
+            </tr>
+            <tr>
+              <td class="w-[100px] text-right">Jurusan</td>
+              <td class="w-[50px] text-center">:</td>
+              <td class="w-[200px]">Teknologi Informasi</td>
+            </tr>
+            <tr>
+              <td class="w-[100px] text-right">Prodi</td>
+              <td class="w-[50px] text-center">:</td>
+              <td class="w-[200px]">D-IV Teknik Informatika</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-[#EAEDF0] rounded-3xl my-8 mx-8 md:mx-28 p-8">
+        <div class="p-2 flex gap-3 items-start">
+          <img src="./images/calendar.png" alt="calendar" />
+          <p class="font-bold text-sm md:text-base">Senin, 20 September 2023</p>
+        </div>
+        <div class="p-2 flex gap-3 items-start">
+          <img src="./images/time.png" alt="time" />
+          <p class="font-bold text-sm md:text-base">07.00 WIB</p>
+        </div>
+        <div class="p-2 flex gap-3 items-start">
+          <img src="./images/location.png" alt="location" />
+          <p class="font-bold text-sm md:text-base">
+            Graha Polinema, Jalan Soekarno Hatta, No. 09, Malang.
+          </p>
+        </div>
+      </div>
+      <div class="bg-[#EAEDF0] rounded-3xl my-8 mx-8 md:mx-28 p-8">
+        <p class="w-full text-center font-bold mb-4">KETENTUAN</p>
+        <ol class="list-decimal list-inside space-y-2">
+          <li>Wajib hadir sesuai dengan waktu yang telah ditentukan.</li>
+          <li>Maksimal 2 pendamping yang diijinkan memasuki gedung wisuda.</li>
+          <li>
+            Dilarang membawa anak dibawah usia 10 tahun kedalam gedung wisuda.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div
+      class="px-5 mx-auto max-w-7xl sm:px-6 lg:px-8 py-8 image bg-div_background bg-no-repeat bg-top h-screen"
+      id="qr_code"
+    >
+      <div class="flex justify-center gap-8 flex-wrap">
+        <div class="flex flex-col items-center gap-5">
+          <img
+            src="./images/qr_code.png"
+            alt="qr_code"
+            class="w-[250px] h-[250px] object-cover"
+          />
+          <p class="bg-[#FF4343] text-white text-center p-4 rounded-2xl">
+            QR CODE INI DIGUNAKAN UNTUK<br />PRESENSI MASUK MAHASISWA!
+          </p>
+        </div>
+
+        <div
+          class="border-t-2 md:border-t-0 border-black pt-5 md:pt-0 border-l-0 md:border-l-2 pl-0 md:pl-5"
+        >
+          <p class="font-bold mb-4 text-center w-full text-xl">SUSUNAN ACARA</p>
+          <ol class="list-decimal list-inside space-y-3">
+            <li>Pembukaan Rapat Terbuka Senat POLINEMA</li>
+            <li>Laporan Pembantu Direktur Bidang Akademik</li>
+            <li>Sambutan Direktur POLINEMA</li>
+            <li>Pelantikan Wisudawan/ Wisudawati</li>
+            <li>Janji Wisudawan/Wisudawati</li>
+            <li>Penyerahan Wisudawan/Alumni kepada Ketua IKA POLINEMA</li>
+            <li>Pembacaan Do&#700;a</li>
+            <li>Penutupan Rapat Terbuka Senat POLINEMA</li>
+            <li>Ramah Tamah</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div
+      class="px-5 mx-auto max-w-7xl sm:px-6 lg:px-8 py-8 image bg-div_background bg-no-repeat bg-top h-screen"
+      id="peta_wisuda"
+    >
+      <div class="flex justify-center">
+        <img src="./images/map.png" alt="map" />
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    undangan_btn = $("#undangan_btn");
+    qr_code_btn = $("#qr_code_btn");
+    peta_wisuda_btn = $("#peta_wisuda_btn");
+    undangan = $("#undangan");
+    qr_code = $("#qr_code");
+    peta_wisuda = $("#peta_wisuda");
+
+    $("document").ready(function () {
+      qr_code.hide();
+      peta_wisuda.hide();
+      undangan_btn.click(function () {
+        undangan_btn.addClass("bg-[#284C67] text-white");
+        qr_code_btn.removeClass("bg-[#284C67] text-white");
+        peta_wisuda_btn.removeClass("bg-[#284C67] text-white");
+        undangan_btn.removeClass("bg-withe text-[#284C67]");
+        qr_code_btn.addClass("bg-withe text-[#284C67]");
+        peta_wisuda_btn.addClass("bg-withe text-[#284C67]");
+        undangan.show();
+        qr_code.hide();
+        peta_wisuda.hide();
+      });
+      qr_code_btn.click(function () {
+        undangan_btn.removeClass("bg-[#284C67] text-white");
+        qr_code_btn.addClass("bg-[#284C67] text-white");
+        peta_wisuda_btn.removeClass("bg-[#284C67] text-white");
+        undangan_btn.addClass("bg-withe text-[#284C67]");
+        qr_code_btn.removeClass("bg-withe text-[#284C67]");
+        peta_wisuda_btn.addClass("bg-withe text-[#284C67]");
+        undangan.hide();
+        qr_code.show();
+        peta_wisuda.hide();
+      });
+      peta_wisuda_btn.click(function () {
+        undangan_btn.removeClass("bg-[#284C67] text-white");
+        qr_code_btn.removeClass("bg-[#284C67] text-white");
+        peta_wisuda_btn.addClass("bg-[#284C67] text-white");
+        undangan_btn.addClass("bg-withe text-[#284C67]");
+        qr_code_btn.addClass("bg-withe text-[#284C67]");
+        peta_wisuda_btn.removeClass("bg-withe text-[#284C67]");
+        undangan.hide();
+        qr_code.hide();
+        peta_wisuda.show();
+      });
+    });
+  </script>
+</html>
